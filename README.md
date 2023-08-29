@@ -88,3 +88,5 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
 
+## Note
+Run command- `node emailSend.js` for starting node server
