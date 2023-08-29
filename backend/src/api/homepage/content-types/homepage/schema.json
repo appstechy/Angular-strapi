@@ -1,0 +1,121 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "main_title": {
+      "type": "string",
+      "required": true
+    },
+    "second_main_title": {
+      "type": "string",
+      "required": true
+    },
+    "home_paragraph": {
+      "type": "richtext",
+      "required": true
+    },
+    "home_images": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "home_about_us_title": {
+      "type": "string",
+      "required": true
+    },
+    "home_about_us_paragraph": {
+      "type": "richtext",
+      "required": true
+    },
+    "home_about_us": {
+      "displayName": "home_about_us_img",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-about-us-img.home-about-us-img",
+      "required": true
+    },
+    "home_our_courses": {
+      "displayName": "home_our_courses",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-our-courses.home-our-courses"
+    },
+    "home_our_courses_title": {
+      "type": "string",
+      "required": true
+    },
+    "home_our_courses_desc": {
+      "type": "richtext",
+      "required": true
+    },
+    "home_our_gallery_title": {
+      "type": "string",
+      "required": true
+    },
+    "home_our_gallery_desc": {
+      "type": "richtext",
+      "required": true
+    },
+    "home_our_gallery": {
+      "displayName": "home_our_gallery",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-our-gallery.home-our-gallery",
+      "required": true
+    },
+    "home_newsletter_title1": {
+      "type": "string",
+      "required": true
+    },
+    "home_newsletter_title2": {
+      "type": "string",
+      "required": true
+    },
+    "home_newsletter": {
+      "displayName": "home_newsletter",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-newsletter.home-newsletter",
+      "required": true
+    },
+    "innova_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "home_nav": {
+      "displayName": "home_nav",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-nav.home-nav",
+      "required": true
+    },
+    "footer": {
+      "type": "string",
+      "required": true
+    },
+    "social_icon": {
+      "displayName": "social_icon",
+      "type": "component",
+      "repeatable": true,
+      "component": "social-icon.social-icon",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,151 @@
+
+<section class="hero-section py-5" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 d-flex align-items-center">
+        <div class="banner-text">
+          <h5 style="color: #A63336;">{{mainTitle | lowercase}}</h5>
+          <h1>{{secondMainTitle}}</h1>
+          <p>
+            {{home_paragraph}}
+          </p>
+          <div class="btn-wrapper">
+            <a class="btn btn-primary" href="#" role="button">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="banner-img">
+          <img class="img-fluid" src="{{home_image}}" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about us section -->
+<section class="about-section" id="about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="heading-wrapper d-flex flex-column align-items-center mb-4">
+          <h2>{{homeAboutUsTitle}}</h2>
+          <div class="yello-line mb-3"></div>
+          <p>
+            {{homeAboutUsDesc}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row" >
+      
+      <div [ngClass]="getColumnClass2()" *ngFor="let componentItem of homeAboutUsComponent">
+        <div class="about-card-wrapper">
+          <h5>{{componentItem.home_about_us_component_name}}</h5>
+          <div class="about-card">
+            <img class="img-fluid" src="http://localhost:1337{{componentItem.home_about_us_component_img.data.attributes.url}}" alt="" />
+            <div class="card-contant">
+              <p>
+                {{componentItem.home_about_us_component_desc}}
+              </p>
+              <a href="#">{{componentItem.home_about_us_component_link}}<i class="fa-solid fa-arrow-right ml-4"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- our courses -->
+<section class="course-section" id="courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="heading-wrapper d-flex flex-column align-items-center mb-4">
+          <h2>{{homeOurCoursesTitle}}</h2>
+          <div class="yello-line mb-3"></div>
+          <p>
+            {{homeOurCoursesDesc}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div [ngClass]="getColumnClass()" *ngFor="let item of homeOurCoursesComponent">
+        <div class="course-wrapper">
+          <img src="http://localhost:1337{{item.image.data.attributes.url}}" alt="" class="img-fluid" />
+          <h3>{{item.title}}</h3>
+          <p>
+            {{item.description}}
+          </p>
+          <a href="#">{{item.link}}<i class="fa-solid fa-arrow-right ml-4"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- gallery section -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="heading-wrapper d-flex flex-column align-items-center mb-4">
+          <h2>{{homeOurGalleryTitle}}</h2>
+          <div class="yello-line mb-3"></div>
+          <p>
+            {{homeOurGalleryDesc}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <article class='gallery'>
+    <a class='gallery-link' href="http://localhost:1337{{item.images.data[0].attributes.url}}" *ngFor="let item of homeOurGalleryComponent">
+      <figure class='gallery-image'>
+        <img src="http://localhost:1337{{item.images.data[0].attributes.url}}">
+        <figcaption><img src="/assets/images/gallery-page/zoom-icon.svg" alt=""></figcaption>
+      </figure>
+    </a>
+
+
+
+  </article>
+
+  <div class="btn-wrapper text-center mt-5">
+    <a class="btn btn-primary" href="our-gallery.html" role="button">View all</a>
+  </div>
+</section>
+
+<!-- news latter -->
+<section class="news-letter-section" id="subscribe">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 col-md-9 col-12">
+        <div class="news-latter-wrapper">
+          <h5 class="mb-2">for any updates</h5>
+          <h2 class="mb-lg-4 mb-md-2">Subscribe Our Newsletter</h2>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email" value={{subscribeNewsletter}} [(ngModel)]="subscribeNewsletter" />
+            
+            <span class="input-group-btn">
+              <button class="btn" type="submit" (click)="submitNewsletter(subscribeNewsletter)">Subscribe Now</button>
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-md-1 mb-4" *ngFor="let item of homeOurNewsLetterComponent">
+        <div class="contact-wrapper">
+          <img src="http://localhost:1337{{item.image.data.attributes.url}}" class="img-fluid" alt="" />
+          <p>{{item.title}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+

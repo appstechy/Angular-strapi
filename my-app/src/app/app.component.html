@@ -1,0 +1,152 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!-- Toolbar -->
+<!-- src/app/app.component.html -->
+
+<header class="sticky-nav">
+  <section class="top-header py-2">
+    <div class="container menu-contrainer">
+      <div class="row align-items-center">
+        <div class="col-2">
+          <div class="logo-wrapper">
+            <img src="http://localhost:1337{{innova_img}}" alt="" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-10">
+
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="top-menubar">
+                <div class="email-wrapper">
+                  <a href="mailto:info@example.com"><i class="fa-solid fa-envelope"></i>info@example.com</a>
+                </div>
+                <div class="devide-line"></div>
+                <div class="phone-wrapper">
+                  <a href="tel:+971 58 566 8801"><i class="fa-solid fa-phone"></i>+111 11 111 1111</a>
+                </div>
+                <div class="devide-line"></div>
+                <div class="social-icon-wrapper">
+                  <a *ngFor="let item of socialIcons" href=""><i class="{{item.social_icon_name}}"></i></a>
+                  <!-- <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  <a href=""><i class="fa-brands fa-linkedin"></i></a> -->
+                </div>
+                <div class="devide-line"></div>
+                <div class="btn-wrapper">
+                  <a class="btn btn-primary" href="#" role="button">Get started</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="menubar-wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container mobile-menu-container">
+        <div class="menu-bar-head">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav d-flex justify-content-around">
+            <li *ngFor="let item of homeNavItems" class="nav-item" [ngClass]="{ 'active': activeLink === 'item.nav_link' }" >
+              <a class="nav-link" (click)="setActiveLink('{{item.nav_link}}')" aria-current="page" href="#{{item.nav_link}}">{{item.nav_name}}</a>
+            </li>
+
+            <!-- <li class="nav-item" [ngClass]="{ 'active': activeLink === 'about-us' }">
+              <a class="nav-link" (click)="setActiveLink('about-us')" href="#about-us"> About Us</a>
+            </li>
+            <li class="nav-item" [ngClass]="{ 'active': activeLink === 'courses' }">
+              <a class="nav-link" (click)="setActiveLink('courses')" href="#courses">Courses</a>
+            </li>
+            <li class="nav-item" [ngClass]="{ 'active': activeLink === 'gallery' }">
+              <a class="nav-link" (click)="setActiveLink('gallery')" href="#gallery">gallery</a>
+            </li>
+            <li class="nav-item" [ngClass]="{ 'active': activeLink === 'subscribe' }">
+              <a class="nav-link" (click)="setActiveLink('subscribe')" href="#subscribe">subscribe</a>
+            </li> -->
+          </ul>
+        </div>
+        </div>
+        <div class="mobile-top-menubar">
+          <div class="email-wrapper">
+            <a href="mailto:info@example.com"><i class="fa-solid fa-envelope"></i><span>info@example.com</span></a>
+          </div>
+          <div class="devide-line"></div>
+          <div class="phone-wrapper">
+            <a href="tel:+971 58 566 8801"><i class="fa-solid fa-phone"></i><span>+971 58 566 8801</span></a>
+          </div>
+          <div class="devide-line"></div>
+          <div class="social-icon-wrapper">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+  </section>
+</header>
+
+<!-- <nav class="navbar">
+  <a routerLink="/">Home</a>
+  <a routerLink="/about-us">About</a>
+  <a routerLink="/courses">Courses</a>
+  <a routerLink="/gallery">Gallery</a>
+  <a routerLink="/studyportal">Study Portal</a>
+  <a routerLink="/contactus">Contact Us</a>
+</nav> -->
+<app-home></app-home>
+
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <img src="http://localhost:1337{{innova_img}}" alt="" class="img-fluid mb-5 w-25 h-55" />
+        <div class="footer-gallery mb-5">
+          <ul>
+            <li *ngFor="let item of homeNavItems" class="footer-link"><a href="#{{item.nav_link}}">{{item.nav_name}}</a></li>
+            <!-- <li class="footer-link"><a href="#about-us">about us</a></li>
+            <li class="footer-link"><a href="#courses">courses</a></li>
+            <li class="footer-link"><a href="#gallery">gallery</a></li>
+            <li class="footer-link"><a href="#subscribe"> Subscribe</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-social-link-wrapper">
+          <div class="social-icon-wrapper">
+            <a *ngFor="let item of socialIcons" href=""><i class="{{item.social_icon_name}}"></i></a>
+            <!-- <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>{{footer}}</p>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+

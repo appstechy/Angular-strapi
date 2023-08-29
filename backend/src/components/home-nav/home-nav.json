@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_home_nav_home_navs",
+  "info": {
+    "displayName": "home_nav",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nav_name": {
+      "type": "string",
+      "required": true
+    },
+    "nav_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

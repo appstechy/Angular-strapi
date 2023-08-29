@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_home_our_gallery_home_our_galleries",
+  "info": {
+    "displayName": "home_our_gallery"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

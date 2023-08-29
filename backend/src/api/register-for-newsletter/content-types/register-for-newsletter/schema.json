@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "register_for_newsletters",
+  "info": {
+    "singularName": "register-for-newsletter",
+    "pluralName": "register-for-newsletters",
+    "displayName": "register_for_newsletter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_social_icon_social_icons",
+  "info": {
+    "displayName": "social_icon"
+  },
+  "options": {},
+  "attributes": {
+    "social_icon_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

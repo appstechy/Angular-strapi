@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_newsletter_home_newsletters",
+  "info": {
+    "displayName": "home_newsletter"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

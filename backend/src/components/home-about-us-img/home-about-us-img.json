@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_home_about_us_img_home_about_us_imgs",
+  "info": {
+    "displayName": "home_about_us_img",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "home_about_us_component_name": {
+      "type": "string",
+      "required": true
+    },
+    "home_about_us_component_img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "home_about_us_component_desc": {
+      "type": "richtext",
+      "required": true
+    },
+    "home_about_us_component_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
