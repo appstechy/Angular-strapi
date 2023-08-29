@@ -1,6 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { prodEnvironment } from 'src/environments/environment.prod';
+import { Console } from 'console';
 
 
 @Injectable({
@@ -8,13 +11,31 @@ import { Observable } from 'rxjs';
 })
 export class ServiceService {
 
-  private homeApiUrl = "http://localhost:1337/api/";
-  private homeApiKey = "Bearer 0226c36619165d71d135d58a0277bd8ba5b4fc7a1197440b53a553d5770b461616eb3476a41f134b5ee3356eb91b2fe42ba99ab46bb992ee5fd1bb37e417f98030f0f38b249ef897a34bb0f94ec762106a269b6a2d6a7ae14a8d9c0fb8e5b8bcbdd3bb95af49b71e0191ea375039ea2cb332df9c74374de1eee6fbb3978fee93";
+  private homeApiUrl = "";
+  private homeApiKey = "Bearer ";
+  private backendUrl = "";
+
+  
 
 
-  constructor(private http: HttpClient) { }
 
-  private backendUrl = 'http://localhost:3000/';
+  constructor(private http: HttpClient) {
+    if (isDevMode()){
+      this.homeApiUrl = environment.apiUrl;
+      this.homeApiKey+= environment.apiKey;
+      this.backendUrl = environment.backendUrl;
+      console.log("Development");
+
+  } else{
+    this.homeApiUrl = prodEnvironment.apiUrl;
+    this.homeApiKey+= prodEnvironment.apiKey;
+    this.backendUrl = prodEnvironment.backendUrl;
+    console.log("Production");
+  }
+
+
+   }
+
 // use to fetch homepage images, heading, etc.
   fetchDataFromHomePage(){
 
