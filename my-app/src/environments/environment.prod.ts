@@ -1,6 +1,6 @@
-export const prodEnvironment = {
-    production: true,
-    apiUrl: 'http://localhost:1337/api/',
-    apiKey: 'xxxxx',
-    backendUrl: 'http://localhost:3000/'
-  };
+export const environment = {
+  production: true,
+  API_URL: process.env['API_URL'],
+  API_KEY: process.env['API_KEY'],
+  BACKEND_URL: process.env['BACKEND_URL'],
+};

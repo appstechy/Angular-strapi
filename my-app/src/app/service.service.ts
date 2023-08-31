@@ -2,8 +2,8 @@ import { Injectable, isDevMode } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { prodEnvironment } from 'src/environments/environment.prod';
-import { Console } from 'console';
+// import { prodEnvironment } from 'src/environments/environment.prod';
+// import { Console } from 'console';
 
 
 @Injectable({
@@ -21,18 +21,17 @@ export class ServiceService {
 
   constructor(private http: HttpClient) {
     if (isDevMode()){
-      this.homeApiUrl = environment.apiUrl;
-      this.homeApiKey+= environment.apiKey;
-      this.backendUrl = environment.backendUrl;
+      this.homeApiUrl = environment.API_URL!;
+      this.homeApiKey+= environment.API_KEY!;
+      this.backendUrl = environment.BACKEND_URL!;
       console.log("Development");
 
   } else{
-    this.homeApiUrl = prodEnvironment.apiUrl;
-    this.homeApiKey+= prodEnvironment.apiKey;
-    this.backendUrl = prodEnvironment.backendUrl;
+    this.homeApiUrl = environment.API_URL!;
+    this.homeApiKey+= environment.API_KEY!;
+    this.backendUrl = environment.BACKEND_URL!;
     console.log("Production");
   }
-
 
    }
 

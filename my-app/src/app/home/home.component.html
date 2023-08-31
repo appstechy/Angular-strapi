@@ -42,7 +42,7 @@
         <div class="about-card-wrapper">
           <h5>{{componentItem.home_about_us_component_name}}</h5>
           <div class="about-card">
-            <img class="img-fluid" src="http://localhost:1337{{componentItem.home_about_us_component_img.data.attributes.url}}" alt="" />
+            <img class="img-fluid" src="{{componentItem.home_about_us_component_img.data.attributes.url}}" alt="" />
             <div class="card-contant">
               <p>
                 {{componentItem.home_about_us_component_desc}}
@@ -73,7 +73,7 @@
     <div class="row justify-content-center">
       <div [ngClass]="getColumnClass()" *ngFor="let item of homeOurCoursesComponent">
         <div class="course-wrapper">
-          <img src="http://localhost:1337{{item.image.data.attributes.url}}" alt="" class="img-fluid" />
+          <img src="{{item.image.data.attributes.url}}" alt="" class="img-fluid" />
           <h3>{{item.title}}</h3>
           <p>
             {{item.description}}
@@ -101,9 +101,9 @@
     </div>
   </div>
   <article class='gallery'>
-    <a class='gallery-link' href="http://localhost:1337{{item.images.data[0].attributes.url}}" *ngFor="let item of homeOurGalleryComponent">
+    <a class='gallery-link' href="{{item.images.data[0].attributes.url}}" *ngFor="let item of homeOurGalleryComponent">
       <figure class='gallery-image'>
-        <img src="http://localhost:1337{{item.images.data[0].attributes.url}}">
+        <img src="{{item.images.data[0].attributes.url}}">
         <figcaption><img src="/assets/images/gallery-page/zoom-icon.svg" alt=""></figcaption>
       </figure>
     </a>
@@ -140,7 +140,7 @@
     <div class="row">
       <div class="col-md-4 mb-md-1 mb-4" *ngFor="let item of homeOurNewsLetterComponent">
         <div class="contact-wrapper">
-          <img src="http://localhost:1337{{item.image.data.attributes.url}}" class="img-fluid" alt="" />
+          <img src="{{item.image.data.attributes.url}}" class="img-fluid" alt="" />
           <p>{{item.title}}</p>
         </div>
       </div>

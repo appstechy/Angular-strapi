@@ -4,13 +4,13 @@ import { ServiceService } from '../service.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css','./responsive.css']
+  styleUrls: ['./home.component_v1.css','./home.component_v2.css','./responsive_v1.css','./responsive_v2.css']
 })
 export class HomeComponent implements OnInit {
   mainTitle: string = "";
   secondMainTitle: string = "";
   home_paragraph: string = "";
-  home_image: string = "http://localhost:1337";
+  home_image: string = "";
 
   homeAboutUsTitle: string = "";
   homeAboutUsDesc: string = "";

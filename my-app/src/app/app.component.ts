@@ -4,7 +4,7 @@ import { ServiceService } from './service.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css','./responsive.css']
+  styleUrls: ['./app.component_v1.css','./app.component_v2.css','./responsive_v1.css','./responsive_v2.css']
 })
 export class AppComponent implements OnInit{
   title = 'my-app';
