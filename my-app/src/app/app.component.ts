@@ -22,12 +22,12 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
       this.mainService.fetchDataFromHomePage().subscribe(
         (data)=>{
-          console.log(data);
+          // console.log(data);
           this.homeNavItems = data.data.attributes.home_nav;
   
-          console.log("Navigation items-",this.homeNavItems);
+          // console.log("Navigation items-",this.homeNavItems);
 
-          console.log("Fetch image",data);
+          // console.log("Fetch image",data);
           this.innova_img = data.data.attributes.innova_image.data.attributes.url;
 
           this.footer = data.data.attributes.footer;

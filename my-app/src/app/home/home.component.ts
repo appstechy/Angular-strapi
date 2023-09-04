@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.homeService.fetchDataFromHomePage().subscribe(
       (data) => {
-        console.log(data);
+        // console.log(data);
         this.mainTitle = data.data.attributes.main_title;
         this.secondMainTitle = data.data.attributes.second_main_title;
         this.home_paragraph = data.data.attributes.home_paragraph;
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
         this.homeOurGalleryTitle = data.data.attributes.home_our_gallery_title;
         this.homeOurGalleryDesc = data.data.attributes.home_our_gallery_desc;
 
-        console.log("Image",this.home_image);
+        // console.log("Image",this.home_image);
       },
       (error) => {
         console.log(error);
@@ -54,9 +54,9 @@ export class HomeComponent implements OnInit {
 
       this.homeService.fetchDataFromHomeAboutUsComponent().subscribe(
         (data) => {
-          console.log(data);
+          // console.log(data);
           this.homeAboutUsComponent = data.data.attributes.home_about_us;
-          console.log("About us component-",this.homeAboutUsComponent);
+          // console.log("About us component-",this.homeAboutUsComponent);
 
         },
         (error) => {
@@ -67,9 +67,9 @@ export class HomeComponent implements OnInit {
 
       this.homeService.fetchDataFromHomeOurCoursesComponent().subscribe(
         (data) => {
-          console.log(data);
+          // console.log(data);
           this.homeOurCoursesComponent = data.data.attributes.home_our_courses;
-          console.log("Our Courses component-",this.homeOurCoursesComponent);
+          // console.log("Our Courses component-",this.homeOurCoursesComponent);
 
         },
         (error) => {
@@ -80,9 +80,9 @@ export class HomeComponent implements OnInit {
 
         this.homeService.fetchDataFromHomeOurGalleryComponent().subscribe(
           (data) => {
-            console.log(data);
+            // console.log(data);
             this.homeOurGalleryComponent = data.data.attributes.home_our_gallery;
-            console.log("Our gallery component-",this.homeOurGalleryComponent);
+            // console.log("Our gallery component-",this.homeOurGalleryComponent);
   
           },
           (error) => {
@@ -93,9 +93,9 @@ export class HomeComponent implements OnInit {
 
         this.homeService.fetchAllEmailsList().subscribe(
           (data) =>{
-            console.log(data);
+            // console.log(data);
             this.allEmailsList = data.data.map((item: { attributes: { email: any; }; }) => item.attributes.email);
-            console.log(this.allEmailsList);
+            // console.log(this.allEmailsList);
           }
         )
 
@@ -103,9 +103,9 @@ export class HomeComponent implements OnInit {
 
         this.homeService.fetchDataFromHomeNewsLetterComponent().subscribe(
           (data) => {
-            console.log(data);
+            // console.log(data);
             this.homeOurNewsLetterComponent = data.data.attributes.home_newsletter;
-            console.log("Our newsletter component-",this.homeOurNewsLetterComponent);
+            // console.log("Our newsletter component-",this.homeOurNewsLetterComponent);
   
           },
           (error) => {
@@ -153,7 +153,7 @@ submitNewsletter(email:string):void{
 
     getColumnClass(): string {
       const numItems = this.homeOurCoursesComponent.length;
-      console.log("Number of items-",numItems);
+      // console.log("Number of items-",numItems);
       switch (numItems) {
         case 1:
           return 'col-lg-12 mb-5';
@@ -169,7 +169,7 @@ submitNewsletter(email:string):void{
 
     getColumnClass2(): string {
       const numItems = this.homeAboutUsComponent.length;
-      console.log("Number of items-",numItems);
+      // console.log("Number of items-",numItems);
       switch (numItems) {
         case 1:
           return 'col-lg-12 mb-5';
