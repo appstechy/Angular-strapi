@@ -9,6 +9,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Project Screenshot
 ![ALT](https://github.com/RinkuAppstechy/images/blob/main/angular_strapi_screenshot.png)
 
+## Project Link
+Project live link is - `https://strapi-angular.vercel.app/`
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
